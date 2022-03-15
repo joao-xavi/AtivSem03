@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Configuration;
 
+
 namespace DB.Repo
 {
     public class db : IDisposable
@@ -9,7 +10,7 @@ namespace DB.Repo
         private readonly SqlConnection connection;
         public db()
         {
-            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionAlfa"].ConnectionString);
+            connection = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AtivSem03;Data Source=DESKTOP-EJA8B8K\\SQLEXPRESS");
             connection.Open();
         }
         public void RunCmd(string strQuery)

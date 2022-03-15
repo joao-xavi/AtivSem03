@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DB.Application\DB.Application.csproj" />
+    <ProjectReference Include="..\DB.Domain\DB.Domain.csproj" />
   </ItemGroup>
 
 </Project>
