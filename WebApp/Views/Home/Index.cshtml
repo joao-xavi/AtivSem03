@@ -1,8 +1,10 @@
 ﻿@model IEnumerable<DB.Domain.User>
 
 @{
-    ViewData["Title"] = "Página Inicial";
+    ViewData["Title"] = "Acesso aos Menus";
 }
-<h2>Página Inicial</h2>
-
+<div>
+<h2><li><a href="User">Menu User</a></li></h2>
+<h2><li><a asp-action="Product">Menu Product</a></li></h2>
+</div>
 

@@ -46,11 +46,11 @@ namespace DB.Application
                 Insert(user);
             }
         }
-        public void Delete(int Id)
+        public void Delete(int id)
         {
             using (db = new db())
             {
-                var strQuery = String.Format("DELETE FROM [User] WHERE Id = {0}", Id);
+                var strQuery = String.Format("DELETE FROM [User] WHERE Id = {0}", id);
                 db.RunCmd(strQuery);
             }
         }
@@ -58,11 +58,23 @@ namespace DB.Application
         {
             using (db = new db())
             {
-                var strQuery = "SELECT * FROM [USER]";
+                var strQuery = "SELECT * FROM [User]";
                 var returnStrQuery = db.CmdReturn(strQuery);
                 return ReaderList(returnStrQuery);
             }
         }
+
+        public User ListId(int id)
+        {
+            using (db = new db())
+            {
+                var strQuery = string.Format("SELECT * FROM [User] WHERE Id = {0}", id);
+                var returnStrQuery = db.CmdReturn(strQuery);
+                return ReaderList(returnStrQuery).FirstOrDefault();
+            }
+        }
+
+
         public List<User>ReaderList(SqlDataReader reader)
         {
             var user = new List<User>();
