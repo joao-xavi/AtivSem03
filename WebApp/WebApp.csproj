@@ -12,11 +12,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DB.Application\DB.Application.csproj" />
-    <ProjectReference Include="..\DB.Domain\DB.Domain.csproj" />
+    <ProjectReference Include="..\DB.Repo\DB.Repo.csproj" />
   </ItemGroup>
 
 </Project>

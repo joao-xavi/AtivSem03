@@ -1,5 +1,4 @@
 ﻿using System;
-using DB.Repo;
 using DB.Domain;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AtivSem03;
 using System.Data.SqlClient;
+using DB.Repo;
 
 namespace DB.Application
 {
